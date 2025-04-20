@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | News Portal</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="./js/main.js" type="module"></script>
+  </head>
+  <body class="flex min-h-screen flex-col bg-gray-50">
+    <header class="bg-gray-600 p-4 text-white">
+      <nav class="container mx-auto flex items-center justify-between">
+        <span class="text-xl font-bold">News Portal</span>
+        <div class="space-x-4">
+          <a href="/" class="hover:underline">Home</a>
+          <a href="about.html" class="hover:underline">About</a>
+          <a href="favourites.html" class="hover:underline">Favourites</a>
+          <a href="login.html" class="hover:underline">Login</a>
+          <a href="contact.html" class="underline">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <main class="container mx-auto flex-1 p-8">
+      <form
+        id="contact-form"
+        class="mx-auto flex max-w-lg flex-col gap-4 rounded-lg bg-white p-6 shadow"
+      >
+        <h1 class="mb-2 text-center text-2xl font-bold">Contact Us</h1>
+        <div id="contact-message"></div>
+        <input
+          name="name"
+          type="text"
+          placeholder="Your Name"
+          class="rounded border p-2"
+          required
+        />
+        <input
+          name="email"
+          type="email"
+          placeholder="Your Email"
+          class="rounded border p-2"
+          required
+        />
+        <input
+          name="subject"
+          type="text"
+          placeholder="Subject"
+          class="rounded border p-2"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          class="min-h-[100px] rounded border p-2"
+          required
+        ></textarea>
+        <button
+          type="submit"
+          class="bg-primary hover:bg-primary-dark rounded p-2 font-semibold text-white"
+        >
+          Send
+        </button>
+      </form>
+    </main>
+    <footer class="sticky bottom-0 mt-8 bg-gray-600 text-center text-white">
+      Footer
+    </footer>
+  </body>
+</html>

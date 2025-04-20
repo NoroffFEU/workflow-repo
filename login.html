@@ -3,27 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Portal</title>
+    <title>Login | News Portal</title>
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="js/main.js" type="module"></script>
+    <script src="./js/features/auth/login.js" type="module"></script>
   </head>
   <body class="flex min-h-screen flex-col bg-gray-50">
     <header class="bg-gray-600 p-4 text-white">
       <nav class="container mx-auto flex items-center justify-between">
         <span class="text-xl font-bold">News Portal</span>
         <div class="space-x-4">
-          <a href="/" class="underline">Home</a>
+          <a href="/" class="hover:underline">Home</a>
           <a href="about.html" class="hover:underline">About</a>
           <a href="favourites.html" class="hover:underline">Favourites</a>
-          <a href="login.html" class="hover:underline">Login</a>
+          <a href="login.html" class="underline">Login</a>
           <a href="contact.html" class="hover:underline">Contact</a>
         </div>
       </nav>
     </header>
     <main class="container mx-auto flex-1 p-8">
-      <h1 class="mb-6 text-3xl font-bold">Latest News</h1>
-      <div id="article-container"></div>
+      <form
+        id="login-form"
+        class="mx-auto flex max-w-md flex-col gap-4 rounded-lg bg-white p-6 shadow"
+      >
+        <h1 class="mb-2 text-center text-2xl font-bold">Login</h1>
+        <div id="login-message"></div>
+        <input
+          name="email"
+          type="email"
+          placeholder="Email"
+          class="rounded border p-2"
+          required
+        />
+        <input
+          name="password"
+          type="password"
+          placeholder="Password"
+          class="rounded border p-2"
+          required
+        />
+        <button
+          type="submit"
+          class="bg-primary hover:bg-primary-dark rounded p-2 font-semibold text-white"
+        >
+          Login
+        </button>
+      </form>
     </main>
     <footer class="sticky bottom-0 mt-8 bg-gray-600 text-center text-white">
       Footer

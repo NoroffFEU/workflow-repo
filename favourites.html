@@ -3,27 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Portal</title>
+    <title>Your Favourites | News Portal</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/images/site.webmanifest" />
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="js/main.js" type="module"></script>
+    <script src="./js/main.js" type="module"></script>
   </head>
   <body class="flex min-h-screen flex-col bg-gray-50">
     <header class="bg-gray-600 p-4 text-white">
       <nav class="container mx-auto flex items-center justify-between">
         <span class="text-xl font-bold">News Portal</span>
         <div class="space-x-4">
-          <a href="/" class="underline">Home</a>
+          <a href="/" class="hover:underline">Home</a>
           <a href="about.html" class="hover:underline">About</a>
-          <a href="favourites.html" class="hover:underline">Favourites</a>
+          <a href="favourites.html" class="underline">Favourites</a>
           <a href="login.html" class="hover:underline">Login</a>
           <a href="contact.html" class="hover:underline">Contact</a>
         </div>
       </nav>
     </header>
     <main class="container mx-auto flex-1 p-8">
-      <h1 class="mb-6 text-3xl font-bold">Latest News</h1>
-      <div id="article-container"></div>
+      <h1 class="mb-6 text-3xl font-bold">Your Favourites</h1>
+      <div id="favourite-container"></div>
     </main>
     <footer class="sticky bottom-0 mt-8 bg-gray-600 text-center text-white">
       Footer

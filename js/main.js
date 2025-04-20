@@ -1,25 +1,28 @@
-import { createMenu } from "../js/ui/common/createMenu.js";
-import { registerFormListener } from "../js/listeners/auth/registerFormListener.js";
-import { loginFormListener } from "../js/listeners/auth/loginFormListener.js";
-import { logoutButtonListener } from "./listeners/auth/logoutButtonListener.js";
-import { displayVenueList } from "./listeners/venues/displayVenueList.js";
-import { displayVenue } from "./listeners/venues/displayVenue.js";
+import displayArticleList from "./features/articles/display-article-list.js";
+import displayFavourites from "./features/favourites/display-favourites.js";
+import displayArticle from "./features/articles/display-article.js";
+import handleContactForm from "./features/contact/handle-contact-form.js";
 
 function initializeApp() {
-  createMenu();
-  logoutButtonListener();
-
   const path = window.location.pathname;
   console.log(path);
 
-  if (path === "/" || path === "/index.html") {
-    displayVenueList();
-  } else if (path.startsWith("/auth/login")) {
-    loginFormListener();
-  } else if (path.startsWith("/auth/register")) {
-    registerFormListener();
-  } else if (path.startsWith("/venue/")) {
-    displayVenue();
+  switch (path) {
+    case "/":
+    case "/index.html":
+      displayArticleList();
+      break;
+    case "/article.html":
+      displayArticle();
+      break;
+    case "/favourites.html":
+      displayFavourites();
+      break;
+    case "/contact.html":
+      handleContactForm();
+      break;
+    default:
+      break;
   }
 }
 
