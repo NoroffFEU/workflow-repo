@@ -13,7 +13,7 @@ export default defineConfig([
     languageOptions: { globals: globals.browser },
   },
   {
-    files: ['eslint.config.js', 'tailwind.config.js'],
+    files: ['eslint.config.js', 'tailwind.config.js', 'vitest.config.js'],
     languageOptions: {
       globals: globals.node,
     },
